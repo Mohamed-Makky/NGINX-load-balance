@@ -1,0 +1,12 @@
+---
+- name: configure firewall
+  gather_facts: false
+  hosts: all
+  become: true 
+  tasks: 
+    - name: 
+      firewalld: 
+        service: http
+        immediate: true
+        permanent: true 
+        state: enabled 

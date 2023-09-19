@@ -1,0 +1,8 @@
+[apache-servers]
+
+server1
+server2
+
+[nginx-servers]
+
+server3

@@ -1,0 +1,23 @@
+---
+- name: install apache
+  hosts: apache-servers
+  become: true
+  gather_facts: false
+  tasks:
+    - name: install http
+      yum:
+        name: 
+           - httpd
+           - php
+           - php-common
+           - php-pecl-apcu
+           - php-cli
+           - php-mysqlnd
+        state: present
+    - name: start service 
+      service: 
+           name: httpd
+           enabled: true
+           state: started
+ 
+
